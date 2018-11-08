@@ -43,7 +43,8 @@ def files_to_list(filename):
     """
     Takes a text file of filenames and makes a list of filenames
     """
-    with open(filename, encoding='utf-8') as f:
+    with open(filename) as f:
+    #with open(filename, encoding='utf-8') as f:
         files = f.readlines()
 
     files = [f.rstrip() for f in files]
